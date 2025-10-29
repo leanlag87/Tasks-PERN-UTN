@@ -1,3 +1,4 @@
+//Usamos JWT para la creación de tokens de acceso
 import jwt from "jsonwebtoken";
 
 const createAccessToken = (payload) => {
