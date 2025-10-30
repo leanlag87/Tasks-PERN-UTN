@@ -35,6 +35,28 @@ export const AuthProvider = ({ children }) => {
     }
   };
 
+  //   try {
+  //     const res = await api.post("/login", data);
+  //     setUser(res.data.user);
+  //     setIsAuth(true);
+  //     return res.data;
+  //   } catch (error) {
+  //     console.log(error);
+  //     // Verifica si hay respuesta del servidor
+  //     if (error.response?.data) {
+  //       if (Array.isArray(error.response.data)) {
+  //         return setErrors(error.response.data);
+  //       }
+  //       setErrors([error.response.data.message || error.response.data.error]);
+  //     } else {
+  //       // Error de red o servidor caído
+  //       setErrors([
+  //         "No se pudo conectar con el servidor. Verifica que esté corriendo.",
+  //       ]);
+  //     }
+  //   }
+  // };
+
   const signup = async (data) => {
     try {
       const res = await api.post("/register", data);

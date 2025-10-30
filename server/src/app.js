@@ -6,7 +6,7 @@ import tasksRoutes from "./router/tasks.routes.js";
 import authRoutes from "./router/auth.routes.js";
 import cors from "cors";
 import { pool } from "./db.js";
-import { FRONTEND_URL } from "./config.js";
+//import { FRONTEND_URL } from "./config.js";
 
 // Exportamos e instanciamos la app de express
 const app = express();
@@ -17,7 +17,7 @@ app.use(morgan("dev"));
 //en este caso solo le damos permiso a nuestro front
 app.use(
   cors({
-    origin: FRONTEND_URL,
+    origin: process.env.FRONTEND_URL,
     credentials: true,
   })
 );
