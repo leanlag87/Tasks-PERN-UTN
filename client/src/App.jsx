@@ -1,4 +1,4 @@
-import { Routes, Route, Outlet } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import HomePage from "./pages/HomePage.jsx";
 import AboutPage from "./pages/AboutPage.jsx";
 import LoginPage from "./pages/LoginPage.jsx";
@@ -8,10 +8,10 @@ import { TasksPage } from "./pages/TasksPage.jsx";
 import TaskFormPage from "./pages/TaskFormPage.jsx";
 import NotFound from "./pages/NotFound.jsx";
 import Navbar from "./components/navbar/Navbar.jsx";
-import { Container } from "./components/ui/Container.jsx";
+//import { Container } from "./components/ui/Container.jsx";
 import { ProtectedRoute } from "./components/ProtectedRoute.jsx";
 import { useAuth } from "./context/AuthContext.jsx";
-import { TasksProvider } from "./context/TasksContext.jsx";
+//import { TasksProvider } from "./context/TasksContext.jsx";
 
 function App() {
   const { loading } = useAuth();

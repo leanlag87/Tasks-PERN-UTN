@@ -13,6 +13,12 @@ export const TasksPage = () => {
     }
   }, [isAuth, getTasks]);
 
+  // useEffect(() => {
+  //   getTasks();
+
+  //   // eslint-disable-next-line react-hooks/exhaustive-deps
+  // }, []);
+
   if (tasks.length === 0) {
     return (
       <div className="flex justify-center items-center h-[calc(100vh-10rem)]">

@@ -22,21 +22,21 @@ export const TasksProvider = ({ children }) => {
   const [tasks, setTasks] = useState([]);
   const [error, setError] = useState([]);
 
-  // const getTasks = async () => {
-  //   const response = await getTasksRequest();
-  //   setTasks(response.data);
-  // };
-
   const getTasks = async () => {
-    try {
-      const response = await getTasksRequest();
-      setTasks(response.data);
-    } catch (error) {
-      if (error.response) {
-        setError(error.response.data.message);
-      }
-    }
+    const response = await getTasksRequest();
+    setTasks(response.data);
   };
+
+  // const getTasks = async () => {
+  //   try {
+  //     const response = await getTasksRequest();
+  //     setTasks(response.data);
+  //   } catch (error) {
+  //     if (error.response) {
+  //       setError(error.response.data.message);
+  //     }
+  //   }
+  // };
 
   const getTask = async (id, task) => {
     try {
